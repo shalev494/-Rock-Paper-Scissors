@@ -35,31 +35,43 @@ const playRound=(playerSelection, computerSelection)=> {
  }else if (playerSelection=="scissors"&& "paper"==computerSelection){
   const p= document.createElement('p');
   p.innerText= "You Win! scissors beats paper"
+  p.classList.add('text');
+  p.style.color= 'green';
   result.appendChild(p);
   playerScore++;
  } else if(playerSelection=="scissors"&& "rock"==computerSelection){
   const p= document.createElement('p');
   p.innerText= "You Lost! rock beats scissors"
+  p.classList.add('text');
+  p.style.color= 'red';
   result.appendChild(p);
   computerScore++;
  } else if(playerSelection=="paper"&& "rock"==computerSelection){
   const p= document.createElement('p');
   p.innerText= "You Win! paper beats rock"
+  p.classList.add('text');
+  p.style.color= 'green';
   result.appendChild(p);
   playerScore++;
  } else if(playerSelection=="paper" && "scissors"==computerSelection){
   const p= document.createElement('p');
   p.innerText= "You Lost! scissors beats paper"
+  p.classList.add('text');
+  p.style.color= 'red';
   result.appendChild(p);
   computerScore++;
  }  else if(playerSelection=="rock" && "scissors"==computerSelection){
   const p= document.createElement('p');
   p.innerText= "You Win! rock beats scissors"
   result.appendChild(p);
+  p.classList.add('text');
+  p.style.color= 'green';
   playerScore++;
  }  else if(playerSelection=="rock" && "paper"==computerSelection){
   const p= document.createElement('p');
   p.innerText= "You Lost! paper beats rock"
+  p.classList.add('text');
+  p.style.color= 'red';
   result.appendChild(p);
   computerScore++;
  } else{
